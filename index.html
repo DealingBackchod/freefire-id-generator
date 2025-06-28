@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Free Fire ID Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: #0f172a;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      text-align: center;
+      padding: 40px;
+    }
+    .container {
+      max-width: 400px;
+      margin: auto;
+      background: #1e293b;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+    h1 {
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+    button {
+      background: #38bdf8;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 10px;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 20px;
+    }
+    button:hover {
+      background: #0ea5e9;
+    }
+    .output {
+      margin-top: 25px;
+      background: #0f172a;
+      padding: 20px;
+      border-radius: 10px;
+      display: none;
+    }
+    .output p {
+      margin: 8px 0;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Free Fire ID Generator</h1>
+    <p>Click the button below to generate credentials.</p>
+    <button onclick="generate()">Generate</button>
+
+    <div class="output" id="outputBox">
+      <p><strong>ID:</strong> <span id="ffid"></span></p>
+      <p><strong>Password:</strong> <span id="ffpass"></span></p>
+    </div>
+  </div>
+
+  <script>
+    function generate() {
+      const ids = ["86527413", "78965423", "66778899", "55221134"];
+      const passwords = ["ffplayer2025", "garena123", "loginme99", "ffidpass890"];
+
+      const randomID = ids[Math.floor(Math.random() * ids.length)];
+      const randomPass = passwords[Math.floor(Math.random() * passwords.length)];
+
+      document.getElementById("ffid").innerText = randomID;
+      document.getElementById("ffpass").innerText = randomPass;
+      document.getElementById("outputBox").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
